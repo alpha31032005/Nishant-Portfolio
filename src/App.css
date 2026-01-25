@@ -1,0 +1,13 @@
+/* Additional App-specific styles */
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure smooth transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
