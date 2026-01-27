@@ -1,10 +1,12 @@
+import { University } from "lucide-react";
+
 export const personalInfo = {
   name: "Nishant Bayaskar",
-  role: "ML Engineer | AI Developer | Data Analyst | Full Stack Learner",
+  role: "ML Engineer | Data Scientist | Data Analyst",
   email: "sarikishor31032005@gmail.com",
   phone: "+91 8766098443",
   location: "India",
-  bio: "Passionate ML Engineer and AI Developer specializing in Computer Vision, Deep Learning, and Data Analytics. Currently pursuing B.E. in Computer Science & Engineering at SGBAU. Experienced in building intelligent systems using cutting-edge technologies and frameworks.",
+  bio: "Passionate AI/ML Engineer and Aspiring Data scientist specializing in Computer Vision, Deep Learning, and Data Analytics. Currently pursuing B.E. in Computer Science & Engineering at SSGMCE, Shegaon affiliated with SGBAU, Amravati. Experienced in building intelligent systems using cutting-edge technologies and frameworks.",
   resume: "/resume.pdf",
   social: {
     github: "https://github.com/alpha31032005",
@@ -17,100 +19,115 @@ export const personalInfo = {
 export const projects = [
   {
     id: 1,
-    title: "Civic Issue Detection Project",
-    description: "An AI-powered system to detect and classify civic issues from images using computer vision and deep learning techniques.",
-    image: "/projects/civic-detection.jpg",
-    tags: ["Computer Vision", "Deep Learning", "Python", "TensorFlow"],
-    category: "AI/ML",
-    github: "https://github.com/yourusername/civic-detection",
-    demo: "https://civic-detection-demo.com",
+    title: "GrievX",
+    description: "An intelligent civic management system that automates complaint detection, categorization, and municipal analytics.",
+    image: "/ProjectPic/GrievX.png",
+    tags: ["Full stack", "Computer Vision", "NLP", "Deep Learning", "Python", "TensorFlow"],
+    category: ["AI/ML", "Full Stack"],
+    github: "https://github.com/alpha31032005/GrievX",
+    demo: "https://civic-issue-detection.netlify.app",
     featured: true,
     highlights: [
-      "Real-time civic issue detection with 92% accuracy",
-      "Multi-class classification for various civic problems",
-      "Integration with municipal reporting systems"
+      "Real-time civic issue classification using custom CNN and multilingual text classifier",
+      "Image model detects potholes, garbage, fallen trees, and damaged electric poles",
+      "Text classifier understands English, Hindi, and Marathi complaints",
+      "Citizen portal to submit complaints with image/text and track status",
+      "Admin dashboard with heatmaps, charts, complaint trends, and category-wise analytics",
+      "Microservice architecture with separate ML service (FastAPI) and backend API (Node.js)",
+      "JWT-based authentication with role-based access (Citizen/Admin)",
+      "Built to be deployable on cloud with container-friendly structure"
     ]
   },
   {
     id: 2,
-    title: "Glass Surface Defect Detection",
-    description: "Automated defect detection system for glass manufacturing using advanced image processing and ML algorithms.",
-    image: "/projects/glass-defect.jpg",
-    tags: ["Computer Vision", "CNN", "OpenCV", "Quality Control"],
+    title: "AI-Powered PPT Generator",
+    description: "An automated tool that generates presentation slides from natural language text using advanced AI language models, saving time and enhancing presentation creation workflows.",
+    image: "/ProjectPic/glass-defect.jpg",
+    tags: ["AI", "NLP", "Generative AI", "Python", "OpenAI", "Automation"],
     category: "AI/ML",
-    github: "https://github.com/yourusername/glass-defect",
+    github: "https://github.com/alpha31032005/AI-powered-PPT-Generator",
     demo: null,
     featured: true,
     highlights: [
-      "Reduced manual inspection time by 70%",
-      "Detected 8 different types of defects",
-      "Implemented as internship project at AI in Glass Casting"
+      "Generates structured PowerPoint slides directly from free-form text prompts",
+      "Uses advanced language models to identify key points and slide hierarchy",
+      "Outputs downloadable `.pptx` files usable in Microsoft PowerPoint or Google Slides",
+      "Improves productivity for students, professionals, and educators",
+      "Modular architecture for prompt processing, slide creation, and template support",
+      "Supports customization of slide styles, headings, and content emphasis"
     ]
   },
   {
     id: 3,
-    title: "Women Safety Analytics",
-    description: "Hackathon-winning project for real-time women safety monitoring using AI-powered threat detection and alert systems.",
-    image: "/projects/women-safety.jpg",
-    tags: ["AI", "Computer Vision", "IoT", "React", "MongoDB"],
-    category: "Full Stack",
-    github: "https://github.com/yourusername/women-safety",
-    demo: "https://women-safety-demo.com",
+    title: "Civic Issue Classification Model",
+    description: "Lightweight ML system that classifies civic issues such as potholes, garbage, fallen trees, and electric poles using image inputs.",
+    image: "/ProjectPic/civic-issue-classification.jpg",
+    tags: ["ML", "Computer Vision", "TensorFlow", "Python", "SentenceTransformer"],
+    category: "AI/ML",
+    github: "https://github.com/alpha31032005/civic-issue-detection-system",
+    demo: "https://civic-issue-detection.netlify.app",
     featured: true,
     highlights: [
-      "Won Best Innovation Award at Hackathon",
-      "Real-time threat detection and emergency alerts",
-      "Integrated GPS tracking and SOS features"
+      "Custom CNN model trained for multi-class civic issue detection from images",
+      "Supports key issue categories historically found in citizen complaints",
+      "Pre-processing pipeline to improve image quality and model accuracy",
+      "Modular Python codebase for training, evaluation, and inference"
     ]
   },
   {
     id: 4,
     title: "Car Price Prediction",
-    description: "Machine learning model to predict car prices based on various features using regression algorithms and ensemble methods.",
-    image: "/projects/car-price.jpg",
-    tags: ["Machine Learning", "Python", "Scikit-learn", "Data Analysis"],
+    description: "A machine learning model that predicts the resale price of cars based on key features using regression algorithms and real-world automotive data.",
+    image: "/ProjectPic/car-price.jpg",
+    tags: ["Machine Learning", "Python", "Scikit-learn", "Data Analysis", "Regression", "EDA"],
     category: "AI/ML",
-    github: "https://github.com/yourusername/car-price-prediction",
-    demo: null,
+    github: "https://github.com/alpha31032005/Car_Price_Prediction",
+    demo: "https://car-price-prediction45.streamlit.app/",
     featured: false,
     highlights: [
       "R² score of 0.94 on test data",
-      "Feature engineering and optimization",
-      "Web interface for predictions"
+      "Built a regression model to estimate car resale prices using features like mileage, year, and engine size",
+      "Performed Exploratory Data Analysis (EDA) to uncover feature relationships and outliers",
+      "Implemented model training, validation, and evaluation with metrics like RMSE and R²",
+      "Cleaned and preprocessed dataset including handling missing values and encoding categorical features",
+      "Compared multiple regression algorithms to find the best-performing model",
+      "Packaged code for reuse and integration into web or backend applications"
     ]
   },
   {
     id: 5,
-    title: "Sports Analytics with Computer Vision",
-    description: "Comprehensive sports analytics system using YOLO for object detection, XGBoost for predictions, and OpenPose for pose estimation.",
-    image: "/projects/sports-analytics.jpg",
-    tags: ["YOLO", "XGBoost", "OpenPose", "Computer Vision"],
+    title: "Movie Recommendation System",
+    description: "An intelligent recommendation engine that suggests movies to users based on past preferences and ratings using collaborative and content-based filtering techniques.",
+    image: "/ProjectPic/movie-recommendation.jpg",
+    tags: ["Machine Learning", "Recommendation Systems", "Python", "Data Science", "Pandas", "Scikit-Learn"],
     category: "AI/ML",
-    github: "https://github.com/yourusername/sports-analytics",
-    demo: null,
-    featured: true,
-    highlights: [
-      "Presented at National Seminar",
-      "Player tracking and action recognition",
-      "Performance metrics analysis"
-    ]
-  },
-  {
-    id: 6,
-    title: "MERN Stack Projects",
-    description: "Collection of full-stack web applications built with MongoDB, Express.js, React, and Node.js.",
-    image: "/projects/mern-projects.jpg",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    category: "Full Stack",
-    github: "https://github.com/yourusername/mern-projects",
+    github: "https://github.com/alpha31032005/Movie_Recommendation_System",
     demo: null,
     featured: false,
     highlights: [
-      "E-commerce platform with payment integration",
-      "Social media dashboard",
-      "Task management system"
+      "Built a movie recommendation system using user ratings and movie metadata",
+      "Implemented collaborative filtering to capture user similarity and preferences",
+      "Used content-based filtering to recommend movies with similar features",
+      "Performed data preprocessing, feature extraction, and model evaluation",
+      "Explored hybrid approaches to improve recommendation quality"
     ]
-  }
+  }//,
+  // {
+  //   id: 6,
+  //   title: "MERN Stack Projects",
+  //   description: "Collection of full-stack web applications built with MongoDB, Express.js, React, and Node.js.",
+  //   image: "/projects/mern-projects.jpg",
+  //   tags: ["React", "Node.js", "MongoDB", "Express"],
+  //   category: "Full Stack",
+  //   github: "https://github.com/yourusername/mern-projects",
+  //   demo: null,
+  //   featured: false,
+  //   highlights: [
+  //     "E-commerce platform with payment integration",
+  //     "Social media dashboard",
+  //     "Task management system"
+  //   ]
+  // }
 ];
 
 export const skills = {
@@ -155,33 +172,34 @@ export const education = [
   {
     id: 1,
     degree: "Bachelor of Engineering in Computer Science & Engineering",
-    institution: "Sant Gadge Baba Amravati University (SGBAU)",
-    location: "Amravati, Maharashtra",
-    duration: "2021 - 2025",
-    score: "X.XX CGPA",
+    University: "Sant Gadge Baba Amravati University (SGBAU)",
+    institution: "Shri Sant Gajanan Maharaj College of Engineering",
+    location: "Shegaon, Maharashtra",
+    duration: "2022 - 2026",
+    score: "8.12 CGPA",
     description: "Specialization in Machine Learning, Artificial Intelligence, and Data Science. Active participant in hackathons and technical events.",
     highlights: [
       "Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Data Structures",
-      "Final Year Project: [Your FYP Title]",
-      "Academic Achievements: [Mention any awards/scholarships]"
+      "Final Year Project: Smart Civic Issue Reporting & Detection using ML for Urban Management",
+      "Academic Achievements: In top 10% of the class"
     ]
   },
   {
     id: 2,
     degree: "Higher Secondary Certificate (HSC)",
-    institution: "Your College Name",
-    location: "Your City",
-    duration: "2019 - 2021",
-    score: "XX%",
-    description: "Science stream with Mathematics and Computer Science."
+    institution: "New English Junior College",
+    location: "Wardha, Maharashtra",
+    duration: "2021 - 2022",
+    score: "76.17%",
+    description: "Science stream with Mathematics and Biology."
   },
   {
     id: 3,
     degree: "Secondary School Certificate (SSC)",
-    institution: "Your School Name",
-    location: "Your City",
-    duration: "Completed 2019",
-    score: "XX%",
+    institution: "New English High School",
+    location: "Wardha, Maharashtra",
+    duration: "2019 - 2020",
+    score: "92.40%",
     description: "Foundation in science and mathematics."
   }
 ];

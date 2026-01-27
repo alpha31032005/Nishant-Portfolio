@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import SectionWrapper from '../components/SectionWrapper';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/portfolioData';
@@ -11,7 +11,12 @@ const Projects = () => {
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
-    : projects.filter(project => project.category === selectedCategory);
+    : projects.filter(project => {
+        const projectCategories = Array.isArray(project.category) 
+          ? project.category 
+          : [project.category];
+        return projectCategories.includes(selectedCategory);
+      });
 
   return (
     <SectionWrapper id="projects" className="bg-gray-50 dark:bg-gray-800/50">
@@ -66,14 +71,20 @@ const Projects = () => {
       </motion.div>
 
       {/* Projects Grid */}
-      <motion.div
-        layout
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        {filteredProjects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} index={index} />
-        ))}
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={selectedCategory}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </motion.div>
+      </AnimatePresence>
 
       {/* No Projects Message */}
       {filteredProjects.length === 0 && (
