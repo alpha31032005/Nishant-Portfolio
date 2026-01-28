@@ -132,39 +132,25 @@ export const projects = [
 
 export const skills = {
   "Machine Learning & AI": [
-    { name: "Machine Learning", level: 90 },
-    { name: "Deep Learning", level: 85 },
-    { name: "Computer Vision", level: 88 },
-    { name: "Natural Language Processing", level: 75 },
-    { name: "TensorFlow/Keras", level: 85 },
-    { name: "PyTorch", level: 80 }
+    { name: "Machine Learning" },
+    { name: "Deep Learning" },
+    { name: "Computer Vision" },
+    { name: "Natural Language Processing" },
+    { name: "TensorFlow/Keras" },
+    { name: "Gen-AI" }
   ],
   "Programming Languages": [
-    { name: "Python", level: 95 },
-    { name: "JavaScript", level: 85 },
-    { name: "C++", level: 75 },
-    { name: "SQL", level: 80 }
-  ],
-  "Web Development": [
-    { name: "React.js", level: 85 },
-    { name: "Node.js", level: 80 },
-    { name: "MongoDB", level: 78 },
-    { name: "Express.js", level: 80 },
-    { name: "Tailwind CSS", level: 90 }
+    { name: "Python" },
+    { name: "JavaScript" },
+    { name: "Java" },
+    { name: "SQL" }
   ],
   "Data Analytics & Visualization": [
-    { name: "Power BI", level: 88 },
-    { name: "Pandas", level: 90 },
-    { name: "NumPy", level: 92 },
-    { name: "Matplotlib/Seaborn", level: 85 },
-    { name: "Excel", level: 80 }
-  ],
-  "Tools & Technologies": [
-    { name: "Git & GitHub", level: 88 },
-    { name: "Docker", level: 70 },
-    { name: "Linux", level: 75 },
-    { name: "OpenCV", level: 85 },
-    { name: "Scikit-learn", level: 90 }
+    { name: "Power BI" },
+    { name: "Pandas" },
+    { name: "NumPy" },
+    { name: "Matplotlib/Seaborn" },
+    { name: "Excel" }
   ]
 };
 
@@ -207,35 +193,19 @@ export const education = [
 export const experience = [
   {
     id: 1,
-    title: "AI in Glass Casting - Internship",
-    company: "Glass Manufacturing Company",
-    location: "Location",
-    duration: "Month Year - Month Year",
-    type: "Internship",
-    description: "Worked on developing an AI-powered system for detecting surface defects in glass manufacturing processes.",
+    title: "Seeking Professional Opportunities",
+    company: "Available for Full-time Roles",
+    location: "Open to Relocation",
+    duration: "Graduating 2026",
+    type: "Career Starter",
+    description: "Enthusiastic Computer Science graduate seeking to leverage strong foundation in Machine Learning, AI, and Full-Stack Development to contribute to innovative projects and gain hands-on professional experience.",
     responsibilities: [
-      "Developed CNN models for defect detection with 90%+ accuracy",
-      "Implemented real-time image processing pipeline",
-      "Collaborated with manufacturing team for data collection",
-      "Optimized model for production deployment"
+      "Actively building practical AI/ML projects to strengthen portfolio",
+      "Continuously learning cutting-edge technologies and industry best practices",
+      "Open to internships, entry-level positions, and collaborative opportunities",
+      "Ready to contribute to impactful projects in AI/ML, Data Science, or Data Analytics"
     ],
-    technologies: ["Python", "TensorFlow", "OpenCV", "Computer Vision"]
-  },
-  {
-    id: 2,
-    title: "Google Cloud Career Launchpad - AI Leader",
-    company: "Google Cloud",
-    location: "Remote",
-    duration: "Year",
-    type: "Program",
-    description: "Selected as an AI Leader in Google Cloud Career Launchpad program, focusing on cloud-based AI solutions and leadership development.",
-    responsibilities: [
-      "Completed advanced AI/ML training modules",
-      "Built cloud-native AI applications",
-      "Collaborated with peers on real-world projects",
-      "Gained expertise in Google Cloud Platform services"
-    ],
-    technologies: ["Google Cloud Platform", "AI/ML", "Cloud Computing"]
+    technologies: ["Python", "TensorFlow", "Node.js", "Machine Learning", "Computer Vision"]
   }
 ];
 
@@ -244,43 +214,71 @@ export const certifications = [
     id: 1,
     name: "Google Cloud Career Launchpad - AI Leader",
     issuer: "Google Cloud",
-    date: "Year",
-    credential: "#XXXXXX"
+    date: "19 July 2025",
+    credential: "oqAc5n98"
   },
   {
     id: 2,
-    name: "Machine Learning Specialization",
-    issuer: "Coursera",
-    date: "Year",
-    credential: "#XXXXXX"
+    name: "The Joy of computing using Python",
+    issuer: "NPTEL",
+    date: "Jul-Oct 2023",
+    credential: "NA"
   },
   {
     id: 3,
-    name: "Deep Learning Specialization",
-    issuer: "Coursera",
-    date: "Year",
-    credential: "#XXXXXX"
-  }
+    name: "TalentNext - Database Solutions",
+    issuer: "Wipro",
+    date: "Jul-Oct 2025",
+    credential: "TNext_SE_25_DB_251840109"
+  },
+  {
+    id: 4,
+    name: "Introduction to MS Excel",
+    issuer: "SimpliLearn powered by Microsoft",
+    date: "17 Aug 2025",
+    credential: "8804596"
+  },
+  {
+    id: 5,
+    name: "Python from A to Z with Devtown",
+    issuer: "Google Developers Student Club",
+    date: "Jan-Apr 2024",
+    credential: "NA"
+  },
+  {
+    id: 6,
+    name: "Android Development using Kotlin",
+    issuer: "Google Developers Student Club",
+    date: "13 March 2024",
+    credential: "NA"
+  },
+  //{
+  //   id: 7,
+  //   name: "Python Programing",
+  //   issuer: "Codsoft",
+  //   date: "Nov-Dec 2023",
+  //   credential: "50a9abf"
+  // }
   // Add more certifications as needed
 ];
 
 export const achievements = [
   {
     id: 1,
-    title: "Hackathon Winner - Women Safety Analytics",
-    description: "Won first place in hackathon with innovative women safety solution",
-    date: "Year"
+    title: "Hackathon RunnerUp - Smart Appointment Scheduler for Healthcare",
+    description: 'Won third place in hackathon with innovative "Hospital Management" solution',
+    date: "2024"
   },
   {
     id: 2,
-    title: "National Seminar Presentation",
-    description: "Presented research on Sports Analytics using Computer Vision",
-    date: "Year"
-  },
-  {
-    id: 3,
     title: "Google Cloud AI Leader",
     description: "Selected for prestigious Google Cloud Career Launchpad program",
-    date: "Year"
-  }
+    date: "2025"
+  }//,
+  // {
+  //   id: 3,
+  //   title: "National Seminar Presentation",
+  //   description: "Presented research on Sports Analytics using Computer Vision",
+  //   date: "Year"
+  // }
 ];
