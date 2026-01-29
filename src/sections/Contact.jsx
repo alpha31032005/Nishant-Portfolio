@@ -25,23 +25,22 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      // Configure EmailJS with your credentials
-      // Sign up at https://www.emailjs.com/
-      // Replace with your actual IDs:
-      // emailjs.init('YOUR_PUBLIC_KEY');
+      // Initialize EmailJS with your public key
+      emailjs.init('Up2Du45kfSu3NUB3u');
       
-      // await emailjs.send(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_TEMPLATE_ID',
-      //   {
-      //     from_name: formData.name,
-      //     from_email: formData.email,
-      //     subject: formData.subject,
-      //     message: formData.message,
-      //   }
-      // );
+      // Send email with template variables
+      await emailjs.send(
+        'service_38bg7ie',
+        'template_bd0ghli',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        }
+      );
 
-      // Temporary success message (remove after EmailJS setup)
       setStatus({
         type: 'success',
         message: 'Message sent successfully! I\'ll get back to you soon.'

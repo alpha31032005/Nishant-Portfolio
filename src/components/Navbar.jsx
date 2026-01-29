@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { Menu, X, Home, User, Briefcase, Code, GraduationCap, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,10 +73,33 @@ const Navbar = () => {
           <motion.a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-2 group relative z-50"
+            whileHover={{ scale: 1.02 }}
           >
-            Portfolio
+            <div className="relative" style={{ fontFamily: 'Roboto Condensed, sans-serif' }}>
+              {/* Glow effect behind text */}
+              <div className="absolute inset-0 blur-md">
+                <span className="text-4xl font-normal tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Nishant
+                </span>
+                <span className="text-4xl font-normal tracking-wide ml-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                  Bayaskar
+                </span>
+              </div>
+              {/* Main text with enhanced contrast */}
+              <span className="relative text-4xl font-normal tracking-tight bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+                Nishant
+              </span>
+              <span className="relative text-4xl font-normal tracking-wide ml-2 bg-gradient-to-r from-purple-700 to-blue-700 dark:from-purple-500 dark:to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+                Bayaskar
+              </span>
+              <motion.div
+                className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg"
+                initial={{ width: 0 }}
+                whileHover={{ width: '100%' }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -90,25 +112,31 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`px-4 py-2 rounded-lg flex items-center space-x-2 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                  }`}
+                  className="relative px-4 py-2 flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{item.name}</span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeSection"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                      initial={false}
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30
+                      }}
+                    />
+                  )}
                 </motion.a>
               );
             })}
-            <ThemeToggle />
-          </div>
+            </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -137,14 +165,21 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
-                      isActive
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                    }`}
+                    className="relative flex items-center space-x-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   >
                     <Icon className="w-5 h-5" />
                     <span>{item.name}</span>
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeSectionMobile"
+                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30
+                        }}
+                      />
+                    )}
                   </a>
                 );
               })}

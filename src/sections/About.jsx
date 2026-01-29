@@ -68,7 +68,7 @@ const About = () => {
             </p>
             <p className="leading-relaxed">
               I specialize in building intelligent systems using cutting-edge technologies like 
-              TensorFlow, PyTorch, and scikit-learn. My expertise spans across Computer Vision, 
+              TensorFlow, EDA, and scikit-learn. My expertise spans across Computer Vision, 
               Natural Language Processing, and Data Analytics.
             </p>
             <p className="leading-relaxed">
@@ -88,7 +88,7 @@ const About = () => {
               Computer Vision
             </span>
             <span className="px-4 py-2 bg-green-500/10 dark:bg-green-500/20 text-green-600 dark:text-green-400 rounded-full text-sm font-medium">
-              Full Stack Dev
+              EDA
             </span>
           </div>
         </motion.div>
