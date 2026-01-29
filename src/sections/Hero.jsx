@@ -80,14 +80,22 @@ const Hero = () => {
             </motion.div>
 
             {/* Role */}
-            <motion.h3
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200"
+              className="space-y-3"
             >
-              {personalInfo.role}
-            </motion.h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200">
+                {personalInfo.role}
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="h-px w-12 bg-gradient-to-r from-red-500 to-transparent"></div>
+                <span className="text-sm md:text-base font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                  Fresh Graduate | Entry-Level Professional
+                </span>
+              </div>
+            </motion.div>
 
             {/* Description */}
             <motion.div
@@ -180,19 +188,12 @@ const Hero = () => {
             >
               {/* Image Container with Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-3xl overflow-hidden">
-                {/* Placeholder for profile image */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gray-400 dark:bg-gray-600 rounded-full flex items-center justify-center">
-                      <span className="text-6xl text-white font-bold">
-                        {personalInfo.name.split(' ')[0][0]}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      Profile Image
-                    </p>
-                  </div>
-                </div>
+                {/* Profile Image */}
+                <img 
+                  src="/myimg2.png" 
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Decorative border */}

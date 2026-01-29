@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { Menu, X, Home, User, Briefcase, Code, GraduationCap, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -78,23 +77,29 @@ const Navbar = () => {
           >
             <div className="relative" style={{ fontFamily: 'Roboto Condensed, sans-serif' }}>
               {/* Glow effect behind text */}
-              <div className="absolute inset-0 blur-md">
-                <span className="text-4xl font-normal tracking-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <div className="absolute inset-0 blur-md opacity-50">
+                <span className="text-3xl font-bold mb-4 tracking-tight bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
                   Nishant
                 </span>
-                <span className="text-4xl font-normal tracking-wide ml-2 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                <span className="text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+                  Nandkishor
+                </span>
+                <span className="text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
                   Bayaskar
                 </span>
               </div>
               {/* Main text with enhanced contrast */}
-              <span className="relative text-4xl font-normal tracking-tight bg-gradient-to-r from-blue-700 via-purple-700 to-pink-700 dark:from-blue-500 dark:via-purple-500 dark:to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="relative text-3xl font-bold mb-4 tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
                 Nishant
               </span>
-              <span className="relative text-4xl font-normal tracking-wide ml-2 bg-gradient-to-r from-purple-700 to-blue-700 dark:from-purple-500 dark:to-blue-500 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="relative text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
+                Nandkishor
+              </span>
+              <span className="relative text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
                 Bayaskar
               </span>
               <motion.div
-                className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg"
+                className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 shadow-lg"
                 initial={{ width: 0 }}
                 whileHover={{ width: '100%' }}
                 transition={{ duration: 0.3 }}

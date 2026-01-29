@@ -5,9 +5,9 @@ import { personalInfo } from '../data/portfolioData';
 
 const About = () => {
   const stats = [
-    { icon: Code, label: 'Projects Completed', value: '15+' },
-    { icon: Brain, label: 'ML Models Built', value: '10+' },
-    { icon: Database, label: 'Technologies', value: '20+' },
+    { icon: Code, label: 'Projects Completed', value: '5+' },
+    { icon: Brain, label: 'ML Models Built', value: '4+' },
+    { icon: Database, label: 'Technologies', value: '8+' },
     { icon: Award, label: 'Certifications', value: '5+' },
   ];
 
@@ -69,7 +69,7 @@ const About = () => {
             <p className="leading-relaxed">
               I specialize in building intelligent systems using cutting-edge technologies like 
               TensorFlow, EDA, and scikit-learn. My expertise spans across Computer Vision, 
-              Natural Language Processing, and Data Analytics.
+              Machine Learning, and Data Analytics.
             </p>
             <p className="leading-relaxed">
               Currently pursuing my B.E. in Computer Science & Engineering at SGBAU, I'm constantly 
