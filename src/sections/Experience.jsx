@@ -7,20 +7,20 @@ import { experience, certifications, achievements } from '../data/portfolioData'
 const Experience = () => {
   return (
     <SectionWrapper id="experience" className="bg-white dark:bg-gray-900">
-      <div className="text-center mb-16">
+      <div className="text-center mb-8 sm:mb-12 md:mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent px-4"
         >
-          Experience & Achievements
+          Experience
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
-          className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"
+          className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4 sm:mb-6"
         />
         <motion.p
           initial={{ opacity: 0 }}

@@ -72,39 +72,15 @@ const Navbar = () => {
           <motion.a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center space-x-2 group relative z-50"
-            whileHover={{ scale: 1.02 }}
+            className="flex items-center group relative z-50 flex-shrink-0"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <div className="relative" style={{ fontFamily: 'Roboto Condensed, sans-serif' }}>
-              {/* Glow effect behind text */}
-              <div className="absolute inset-0 blur-md opacity-50">
-                <span className="text-3xl font-bold mb-4 tracking-tight bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                  Nishant
-                </span>
-                <span className="text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                  Nandkishor
-                </span>
-                <span className="text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-                  Bayaskar
-                </span>
-              </div>
-              {/* Main text with enhanced contrast */}
-              <span className="relative text-3xl font-bold mb-4 tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
-                Nishant
-              </span>
-              <span className="relative text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
-                Nandkishor
-              </span>
-              <span className="relative text-3xl font-bold mb-4 tracking-tight ml-2 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 dark:from-red-500 dark:via-pink-500 dark:to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
-                Bayaskar
-              </span>
-              <motion.div
-                className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 shadow-lg"
-                initial={{ width: 0 }}
-                whileHover={{ width: '100%' }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
+            <img 
+              src="/logoNB.png" 
+              alt="NB Logo" 
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+            />
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -141,10 +117,11 @@ const Navbar = () => {
             </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -159,9 +136,10 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800"
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 shadow-lg overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-3 space-y-1 max-h-[70vh] overflow-y-auto">
               {navItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = activeSection === item.href.slice(1);
@@ -170,14 +148,18 @@ const Navbar = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className="relative flex items-center space-x-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                    className={`relative flex items-center space-x-3 px-4 py-3.5 rounded-lg text-base font-medium transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400' 
+                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
                   >
                     <Icon className="w-5 h-5" />
                     <span>{item.name}</span>
                     {isActive && (
                       <motion.div
                         layoutId="activeSectionMobile"
-                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-r"
                         transition={{
                           type: "spring",
                           stiffness: 380,
